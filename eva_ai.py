@@ -134,13 +134,16 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
             if(x==college_list[i]):
                 college_score=float(y)+college_score
 
-    college_score=(4*college_score)/len(college_list)
+ 
     for i in range(0,len(company_list)):
         for (x,y) in company_dict:
             if(x==company_list[i]):
                 company_score=float(y)+company_score
 
     company_score=(10*company_score)/len(company_list)
+    college_score=(4*college_score)/len(college_list)
+    skill_score=20*skill_score
+    total_score=company_score+college_score+skill_score
  
  
     
@@ -151,6 +154,8 @@ print company_score
 print email
 print "\nSCORE"
 print skill_score#percent
+print "Total Score" #out of 90
+print total_score
 #Average runtime:11.65
 print time.time()-start
 
