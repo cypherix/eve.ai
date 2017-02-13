@@ -6,20 +6,15 @@ import os
 import re
 import time
 import string
+import dictionary
 
-frameworks=[("php","laravel"),("javascript","nodejs"),("python","django"),("python","data analytics"),("php","codeignite")]
-skill_dict=["php","javascript","html","c#","asp.net","java","laravel","nodejs","django","python","ml","c","c++","mysql","mongodb","postgresql","ajax"]
-college_dict=[('Sree Chitra Thirunal College Of Engineering Trivandrum',5.0),('University Of California Irwine',5.0),('Harvard University',5.0)]
-company_dict=[('Google ',5.0),('Microsoft ',5.0),('TCS ',3.0),('Freshdesk ',4.0)]
-start=time.time()
 college=""
 company=""
 c=""
 college_score=0.0
 company_score=0.0
-
 conclusion2=""
-
+start=time.time()
 
 
 #Location of file
@@ -34,10 +29,10 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
         stop_words=set(stopwords.words('english'))
         stop_words=set(string.punctuation)
         resume1=[i for i in wordpunct_tokenize(c2) if i  not in stop_words]
-        print "Skills in resume:"
+        #print "Skills in resume:"
         resume=list(set(resume1))#removes duplicates
-        skill_list=[i for i in resume if i in skill_dict] #compare skills in resume and the skill dictionary
-        print skill_list
+        skill_list=[i for i in resume if i in dictionary.skill_dict] #compare skills in resume and the skill dictionary
+        #print skill_list
         skill_match=[]
 
         jd=["javascript","html","ml","php"]#jd
@@ -46,7 +41,7 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
         ##append frameworks to new jd list
         jd1=jd
         for i in range(0,len(jd)):
-         for (x,y) in frameworks:
+         for (x,y) in dictionary.frameworks:
           if(x==jd[i]):
            jd1.append(y)
         #print "JD skills after processing"
@@ -56,8 +51,8 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
             for j in range(0,len(skill_list)):
                 if(jd1[i]==skill_list[j]):
                     skill_match.append(skill_list[j])
-        print "\nMatching skill set:"
-        print skill_match
+        #print "\nMatching skill set:"
+        #print skill_match
 
         #score generation
         len_skill_match=len(skill_match)
@@ -130,13 +125,13 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
     college_list=entity_recog(c1)
     company_list=entity_recog(c2)
     for i in range(0,len(college_list)):
-        for (x,y) in college_dict:
+        for (x,y) in dictionary.college_dict:
             if(x==college_list[i]):
                 college_score=float(y)+college_score
 
  
     for i in range(0,len(company_list)):
-        for (x,y) in company_dict:
+        for (x,y) in dictionary.company_dict:
             if(x==company_list[i]):
                 company_score=float(y)+company_score
 
@@ -147,14 +142,14 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
  
  
     
-print "Extracted Details:"          
-print college_score
-print company_score
+#print "Extracted Details:"          
+#print college_score
+#print company_score
 #print (firstNlines)
-print email
-print "\nSCORE"
-print skill_score#percent
-print "Total Score" #out of 90
+#print email
+#print "\nSCORE"
+#print skill_score#percent
+print "Total Score out of 90"
 print total_score
 #Average runtime:11.65
 print time.time()-start
