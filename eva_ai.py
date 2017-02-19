@@ -2,12 +2,22 @@ from nltk.tag import StanfordNERTagger
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import wordpunct_tokenize
 from nltk.corpus import stopwords
+import os,sys,django
+sys.path.append(os.path.join(os.path.dirname(__file__), '/Users/continuumlabs/git/djangoeve/'))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "eve.settings")
+from django.conf import settings
+from django.db import models
+
+django.setup()
+from client.models import job, resume
 import os
 import re
 import time
 import string
 import dictionary
 import GNB
+import GIT
+import itertools
 
 college=""
 company=""
@@ -15,6 +25,7 @@ c=""
 college_score=0.0
 company_score=0.0
 conclusion2=""
+degree=""
 start=time.time()
 
 def entity_recog(text):
@@ -47,7 +58,13 @@ def entity_recog(text):
 
 
 #Location of file
-with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
+resumeobj=resume.objects.get(resumeid=7)
+url=resumeobj.resume.url
+print url
+x="/Users/continuumlabs/git/djangoeve/eve/static"+url
+
+
+with open(x, 'r') as f:
     
     data=f.read()
 ### SKILL EXTRACTION AND SCORE GENERATION 
@@ -59,12 +76,13 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
         stop_words=set(string.punctuation)
         resume1=[i for i in wordpunct_tokenize(c2) if i  not in stop_words]
         #print "Skills in resume:"
-        resume=list(set(resume1))#removes duplicates
-        skill_list=[i for i in resume if i in dictionary.skill_dict] #compare skills in resume and the skill dictionary
+        resume_list=list(set(resume1))#removes duplicates
+        skill_list=[i for i in resume_list if i in dictionary.skill_dict] #compare skills in resume and the skill dictionary
         #print skill_list
         skill_match=[]
-
+####################################get jd from the user##################################################
         jd=["javascript","html","ml","php"]#jd
+###########################################################################################################
         #print "\nJD skills "
         #print jd
         ##append frameworks to new jd list
@@ -81,7 +99,7 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
                 if(jd1[i]==skill_list[j]):
                     skill_match.append(skill_list[j])
         #print "\nMatching skill set:"
-        print skill_match
+        #print skill_match
 
         #score generation
         len_skill_match=len(skill_match)
@@ -109,6 +127,12 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
         c1 =college.split(' ',1)[1]
         if c1[-1]!=".": 
            c1+="."  #to determine the end of extracted paragraph(if there is no fullstop)
+        ##degree extraction regex
+        if re.findall(r'\b(([\w]+[.][\w]+)([.][\w])*)',c1):
+                degree=re.findall(r'\b(([\w]+[.][\w]+)([.][\w])*)',c1)
+                degree=map(list,degree)
+                degree1=filter(None,list(set(itertools.chain.from_iterable(degree))))
+                
         college_list=entity_recog(c1)
         for i in range(0,len(college_list)):
          for (x,y) in dictionary.college_dict:
@@ -144,22 +168,22 @@ with open('/Users/continuumlabs/Desktop/stanford/resume.txt', 'r') as f:
     data_sect2=re.findall(r'[\w\.-]+@[\w\.-]+',data)#email regex
     email=str(data_sect2)  
     skill_score=20*skill_score
+    git_repos,git_followers=GIT.gitscrape(data)
     total_score=company_score+college_score+skill_score
     if(email):
         total_score=total_score+5
  
     
-#print "Extracted Details:"          
+print "Extracted Details:"          
 #print college_score
-print company_list
+#print company_list
 #print len(email)
+print degree1
 #print "\nSCORE"
 #print skill_score#percent
 print "Total Score out of 95"
 print total_score
 print(GNB.machine_learning(total_score))
+print git_repos,git_followers
 #Average runtime:6.068s
 print time.time()-start
-
-
-
