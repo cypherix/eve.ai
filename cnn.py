@@ -169,12 +169,15 @@ class eve:
                     print text
                     company_score=0.0
                     company_names=[]
+                    company_list2=[]
                     processed_company_list=[]
                     if(text):
                                  
                                 #comp,job,dur= self.APII(text)
                                 company_list=self.entity_recog(work)
-                                for i in itertools.product(company_list, dictionary.company_dict):
+                                for (x,y) in dictionary.company_score:
+                                    company_list2.append(x)
+                                for i in itertools.product(company_list, company_list2):
                                         company_names.append(i)
                                 for (x,y) in company_names:
                                         c=fuzz.partial_ratio(*(x,y))
