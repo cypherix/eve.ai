@@ -12,13 +12,131 @@ training_data.append({"class":"edu", "sentence":"Bachelors degree Computer Scien
 training_data.append({"class":"edu", "sentence":"Studied BTech Computer Science SCT College of Engineering"})
 training_data.append({"class":"edu", "sentence":"MS Mechanical Engineering Rajagiri College of Technology"})
 training_data.append({"class":"work", "sentence":"work experience 2 years 4 months"})
-training_data.append({"class":"work", "sentence":"Served as CTO Mindfox for 4 years"})
+training_data.append({"class":"work", "sentence":"Served as Chief Technical Officer at Mindfox for 4 years"})
 training_data.append({"class":"work", "sentence":"Worked TCS 5 years  Systems Engineer"})
 training_data.append({"class":"work", "sentence":"Mindfox Google Linkedin"})
 
-training_data.append({"class":"trivial", "sentence":"Was part of college drama team, cricket team, football team"})
+#New Added
+
+
+
+
+training_data.append({"class":"edu", "sentence":"Bachelor's degree in Computer Science Georgia Institue of Technology- Atlanta,GA"})
+training_data.append({"class":"edu", "sentence":"BA (Hons) Graphic Design from University of Birmingham"})
+training_data.append({"class":"edu", "sentence":"Diploma in Business Studies Central College Birmingham"})
+#training_data.append({"class":"edu", "sentence":"Diploma in Business Studies Central College of Birmiingham"})
+#training_data.append({"class":"edu", "sentence":"Higher National Certificate (HNC) in Multimedia"})
+#training_data.append({"class":"edu", "sentence":"Hignher National Certificate (HNC) in Multimedia"})
+#training_data.append({"class":"edu", "sentence":"Qualification in Computer graphics: 3D Studio, Photoshop, Illustrator IATA (Namur, Belgium)"})
+training_data.append({"class":"edu", "sentence":"Qualification in Computer graphics: 3D Studio, Photoshop, Illustrator IATA (Namur, Belgium)"})
+training_data.append({"class":"edu", "sentence":"Bachelor of Engineering in Electronics and Communication in April 2003 from Coimbatore Institute of Technology, Coimbatore "})
+#training_data.append({"class":"edu", "sentence":"Bachelor of Engineering in Electronics and Communication in April 2003 from Coimbatore Institute of Technology, Coimbatore"})
+#training_data.append({"class":"edu", "sentence":"Purdue University College of Technology, Kokomo, In Bachelor of Science in Computer and Information Technology "})
+#training_data.append({"class":"edu", "sentence":"Purdue University College of Technology, Kokomo In Bachelor of Science in Computer and Information Technology"})
+#training_data.append({"class":"edu", "sentence":"Master's degree , Electronic engineering Military schoo for artillery and air defense (VVUAPVO)"})
+#training_data.append({"class":"edu", "sentence":"Master's degree, Electronic engineering Military school for artillery and air defense"})
+#training_data.append({"class":"edu", "sentence":"Majoring in Software Engineering (Diploma of Software Engineer) Academy of Management and Computer Training, St-Petersburg, Russia "})
+#training_data.append({"class":"edu", "sentence":"Master's Degree in Economics (Russian Diploma of Economist - Organizer) St. Petersburg State Agrarian University, Faculty of Economics, St-Petersburg, Russia"})
+#training_data.append({"class":"edu", "sentence":"Continuing Education Courses, University of Missouri at St. Louis"})
+#training_data.append({"class":"edu", "sentence":"MSc Design and Digital Media, University of Edinburgh "})
+#training_data.append({"class":"edu", "sentence":"Multimedia BA (Hons), Nottingham Trent University"})
+#training_data.append({"class":"edu", "sentence":"PhD, School of Pharmacy and Pharmacology, University of Nottingham"})
+#training_data.append({"class":"edu", "sentence":"MSc, Biochemical Pharmacology, University of Southampton"})
+#training_data.append({"class":"edu", "sentence":"BSc (Hons), Applied Biology, University of Bath"})
+#training_data.append({"class":"edu", "sentence":"BSc(Hons) Software Engineering Manchester Metropolitan University "})
+#training_data.append({"class":"edu", "sentence":"PgDip Interactive Multimedia  Bath School Of Art And Design "})
+#training_data.append({"class":"edu", "sentence":"Bachelor of Technology (Computer Science) National Institute of Technology Raipur"})
+#training_data.append({"class":"edu", "sentence":"Seneca College, Toronto, ON Digital Media Arts Diploma Program"})
+#training_data.append({"class":"edu", "sentence":"Sheridan College, Oakville, ON Web Design Graduate Certiﬁcate "})
+#training_data.append({"class":"edu", "sentence":"Graduated with High Honours - Sheridan College "})
+
+
+
+#training_data.append({"class":"work", "sentence":"Circus Strategic Communications Junior Web Developer "})
+#training_data.append({"class":"work", "sentence":"Junior Web Developer at Circus Strategic Communication"})
+#training_data.append({"class":"work", "sentence":"Pixel Junkie Inc. Web Developer "})
+#training_data.append({"class":"work", "sentence":"Web Developer at Pixel Junkie Inc."})
+#training_data.append({"class":"work", "sentence":"Digital-Minded Junior Flash Developer "})
+#training_data.append({"class":"work", "sentence":"Digital Minded Junior Flash Developer"})
+#training_data.append({"class":"work", "sentence":"Serving as Senior Data Analyst at Baidu,CA"})
+#training_data.append({"class":"work", "sentence":"Beyond Education, London, UK. Backend Developer"})
+#training_data.append({"class":"work", "sentence":"National Institute of Technology Raipur, Raipur, Chhattisgarh, India Developer – Student Marksheet Generator"})
+#training_data.append({"class":"work", "sentence":"Asahi India Glass Limited (AIS) & Accenture, India Developer – AIS InfoBoard"})
+#training_data.append({"class":"work", "sentence":"Front end Web Developer Google, London "})
+training_data.append({"class":"work", "sentence":"Front End Developer at Google, London"})
+"""training_data.append({"class":"work", "sentence":"Senior Web Coder / Designer Shelter, London"})
+training_data.append({"class":"work", "sentence":"Faculty of Applied Sciences Web Developer Lancaster University v"})
+training_data.append({"class":"work", "sentence":"Freelance Web development Pixel UK Ltd; E-scape Media Ltd."})
+training_data.append({"class":"work", "sentence":"Web Developer Eunite Ltd (Zendor Group), Manchester; "})
+training_data.append({"class":"work", "sentence":"Programmer/Research Assistant KINDS Project, Salford University"})
+training_data.append({"class":"work", "sentence":"Founder, Portland Data Ltd "})
+training_data.append({"class":"work", "sentence":"Senior Technology Transfer Manager, King's College London "})
+training_data.append({"class":"work", "sentence":"PHP Developer (Contract), Adaptive Lab "})
+training_data.append({"class":"work", "sentence":"Senior PHP Developer (Contract), Havas Worldwide"})
+training_data.append({"class":"work", "sentence":"Technical Lead (Contract), MBA & Company "})
+training_data.append({"class":"work", "sentence":"Senior PHP Developer (Contract), Amaze "})
+training_data.append({"class":"work", "sentence":"Senior PHP Developer (Contract), MBA & Company"})
+training_data.append({"class":"work", "sentence":"Back End Developer, SHOWstudio "})
+training_data.append({"class":"work", "sentence":"CakePHP Developer, Moonrocket Interactive "})
+training_data.append({"class":"work", "sentence":"PHP Developer, Abraxor "})
+training_data.append({"class":"work", "sentence":"Developer Operations engineer W3C/MIT"})
+training_data.append({"class":"work", "sentence":"JavaScript developer TEKsystems"})
+training_data.append({"class":"work", "sentence":"Web developer at Ericsson"})
+training_data.append({"class":"work", "sentence":"Web developer, co-founder Evocatio Solutions technologiques Inc"})
+training_data.append({"class":"work", "sentence":"Web integrator Groupe Informatique TechSolCom Inc"})
+training_data.append({"class":"work", "sentence":"Web integrator / PHP Developer Câble Axion Digitel Inc"})
+training_data.append({"class":"work", "sentence":"Web integrator / PHP Developer Inexis solution web Inc"})
+training_data.append({"class":"work", "sentence":"Internet Marketing Manager Graybar Electric Company, Inc"})
+training_data.append({"class":"work", "sentence":"Web Developer Tacony Developer "})
+training_data.append({"class":"work", "sentence":"Web Developer DeniServ"})
+training_data.append({"class":"work", "sentence":"Web Developer Monsanto/Net Effects"})
+training_data.append({"class":"work", "sentence":"Web Developer Brighton/Net Effects "})
+training_data.append({"class":"work", "sentence":"Web Developer NextStart.com "})
+training_data.append({"class":"work", "sentence":"Webmaster Skywalker Communications "})
+training_data.append({"class":"work", "sentence":"FLASH ACCESSIBILITY CONSULTANT Freelance "})
+training_data.append({"class":"work", "sentence":"INTERACTIVE TECHNOLOGY LEAD Modernista"})
+training_data.append({"class":"work", "sentence":"SENIOR WEB DEVELOPER Houghton Mifflin Company"})
+training_data.append({"class":"work", "sentence":"DEVELOPER/PROGRAMMER Red98 LLC"})
+training_data.append({"class":"work", "sentence":"Freelance web developer, database programmer, application architect"})
+training_data.append({"class":"work", "sentence":"WEBSTIK ltd Owner / Web developer "})
+training_data.append({"class":"work", "sentence":"OSI Front End developer"})
+training_data.append({"class":"work", "sentence":"Mansion Productions Web Developer"})
+training_data.append({"class":"work", "sentence":"REXINTEGRA UI/UX Developer "})
+training_data.append({"class":"work", "sentence":"Promega Corporation, Indianapolis, IN Web DeveloperSGate Entertainment, Indianapolis, IN Web Developer"})
+training_data.append({"class":"work", "sentence":"SapientNitro Senior interactive develope"})
+training_data.append({"class":"work", "sentence":"Endice Software  Senior web developer"})
+training_data.append({"class":"work", "sentence":"U&CO Founder & developer "})
+training_data.append({"class":"work", "sentence":"Mountainview Technical lead"})
+training_data.append({"class":"work", "sentence":"I have worked regularly as a remote Drupal Developer for Vancouver-based Drupal shop, ImageX Media "})
+training_data.append({"class":"work", "sentence":"Web Design Company - Birmingham WEB DEVELOPER "})
+training_data.append({"class":"work", "sentence":"SEO Company - Coventry   TRAINEE WEB DEVELOPER "})
+training_data.append({"class":"work", "sentence":"Office Assistant - Caplan Industries"})
+training_data.append({"class":"work", "sentence":"Web Developer Business Alternatives, Eugene, OR"})
+training_data.append({"class":"work", "sentence":"Web instructor Mania Marketing, Eugene, OR"})
+training_data.append({"class":"work", "sentence":"Salesforce – Atlanta, GA UX Engineer"})
+training_data.append({"class":"work", "sentence":"POP – Seattle, WA Senior Interactive Developer"})
+training_data.append({"class":"work", "sentence":"Amazon – Seattle, WA Software Development Engineer"})
+training_data.append({"class":"work", "sentence":"CareerBuilder – Norcross, GA Senior Software Engineer"})
+training_data.append({"class":"work", "sentence":"Turner Broadcasting – Atlanta, GA Advanced Software Developer"})
+training_data.append({"class":"work", "sentence":"CareerBuilder – Norcross, GA Senior Software Engineer"})
+training_data.append({"class":"work", "sentence":"Objectware – Norcross, GA Web Developer "})
+
+
+
+training_data.append({"class":"skills", "sentence":"Agile Methodology, Responsive Web Design, Browser Performance, Mobile Web, Accessibility, Ajax, Unit Testing, MV*, Android App Development, Preprocessors "})
+training_data.append({"class":"skills", "sentence":"JavaScript (native, Ember, Backbone, Node, jQuery), HTML, CSS, SVG, Sass, Less, Grunt, Gulp, ASP.NET (Web Forms, MVC), C#, Visual Basic, Java, PHP, SQL, Regex  "})
+training_data.append({"class":"skills", "sentence":"Source Control (Git, TFS, SVN), Photoshop, Illustrator, Visual Studio, Eclipse, Heroku, WordPress, Google Analytics "})
+training_data.append({"class":"skills", "sentence":"Planned, developed and published multi-page web sites "})
+training_data.append({"class":"skills", "sentence":"Planned, developed and published multi-page web sites "})
+
+#New Ended"""
+
+
+training_data.append({"class":"trivial", "sentence":"Was part of college drama team"})
 training_data.append({"class":"trivial", "sentence":"Projects Seminars Internships"})
 training_data.append({"class":"trivial", "sentence":"Address email github linkedin"})
+training_data.append({"class":"trivial", "sentence":"Was part of cricket team football team"})
+
 
 
 print ("%s sentences in training data" % len(training_data))
@@ -236,6 +354,7 @@ def classify(text, show_details=False):
     work=[]
     edu=[]
     trivial=[]
+    zero=[]
     for sentence in text:
         
         results = think(sentence, show_details)
@@ -244,6 +363,8 @@ def classify(text, show_details=False):
         results.sort(key=lambda x: x[1], reverse=True) 
         return_results =[[classes[r[0]],r[1]] for r in results]
         print ("%s \n classification: %s" % (sentence, return_results))
+        if not return_results:
+            trivial.append(sentence)
         for x,y in return_results:
             if x=='work':
                 work.append(sentence)
@@ -251,6 +372,8 @@ def classify(text, show_details=False):
                 edu.append(sentence)
             elif x=='trivial':
                 trivial.append(sentence)
+           
+        
     return work,edu,trivial
 
 #classify("sudo make me a sandwich")
